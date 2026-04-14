@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Button } from './components/Button';
-import { Card } from './components/Card';
-import { Input } from './components/Input';
+import { Button, Card, Input } from '../src';
 import { Login } from './pages/Login';
 import loginBg from './assets/login-bg.svg';
 import './App.css';
@@ -25,23 +23,20 @@ function App() {
   return (
     <div className="showcase-layout" style={{ backgroundImage: `url(${loginBg})` }}>
 
-      {/* Nav */}
       <div style={{ position: 'fixed', top: 24, right: 24, zIndex: 10 }}>
         <Button variant="primary" onClick={() => setCurrentView('login')}>
           Tela Login
         </Button>
       </div>
 
-      {/* Header */}
       <Card style={{ textAlign: 'center' }}>
         <h1 className="showcase-title">
-          <span style={{ color: '#40E18B' }}>Serotonina</span>
-          <span style={{ color: '#ffffff' }}>.DS</span>
+          <span style={{ color: 'var(--ds-color-primary)' }}>Serotonina</span>
+          <span style={{ color: 'var(--ds-color-text-default)' }}>.DS</span>
         </h1>
         <p className="showcase-subtitle">Portal de Academias e Parceiros</p>
       </Card>
 
-      {/* Buttons */}
       <Card>
         <h2 className="card-section-title">Buttons</h2>
 
@@ -52,8 +47,8 @@ function App() {
             <Button variant="primary">Primary</Button>
           </div>
           <div className="showcase-col">
-            <span className="showcase-label">Secundary</span>
-            <Button variant="secondary">Secundary</Button>
+            <span className="showcase-label">Secondary</span>
+            <Button variant="secondary">Secondary</Button>
           </div>
           <div className="showcase-col">
             <span className="showcase-label">Tertiary</span>
@@ -70,8 +65,8 @@ function App() {
             <Button variant="primary" disabled>Primary</Button>
           </div>
           <div className="showcase-col">
-            <span className="showcase-label">Secundary</span>
-            <Button variant="secondary" disabled>Secundary</Button>
+            <span className="showcase-label">Secondary</span>
+            <Button variant="secondary" disabled>Secondary</Button>
           </div>
           <div className="showcase-col">
             <span className="showcase-label">Tertiary</span>
@@ -80,10 +75,8 @@ function App() {
         </div>
       </Card>
 
-      {/* Inputs */}
       <Card>
         <h2 className="card-section-title">Input</h2>
-
         <div className="showcase-row">
           <div className="showcase-col">
             <span className="showcase-label">Default Field</span>

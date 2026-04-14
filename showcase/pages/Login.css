@@ -3,11 +3,10 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #101414;
+  background-color: var(--ds-color-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: 'Poppins', sans-serif;
 }
 
 .login-form {

@@ -5,13 +5,12 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-export const Input = ({ 
-  label, 
-  id, 
-  disabled, 
-  ...props 
+export const Input = ({
+  label,
+  id,
+  disabled,
+  ...props
 }: InputProps) => {
-  // Gera um ID único automático caso não seja passado um.
   const generatedId = useId();
   const inputId = id || generatedId;
 

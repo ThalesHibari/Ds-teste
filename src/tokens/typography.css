@@ -1,0 +1,18 @@
+:root {
+  --ds-font-family: 'Poppins', sans-serif;
+
+  --ds-font-size-xs: 12px;
+  --ds-font-size-sm: 13px;
+  --ds-font-size-base: 14px;
+  --ds-font-size-lg: 20px;
+  --ds-font-size-xl: 28px;
+  --ds-font-size-2xl: 36px;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+
+  --ds-line-height-tight: 16px;
+  --ds-line-height-base: 20px;
+  --ds-letter-spacing-base: 0.1px;
+}

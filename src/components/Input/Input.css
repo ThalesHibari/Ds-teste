@@ -1,0 +1,75 @@
+.input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  font-family: var(--ds-font-family);
+  --input-surface: var(--ds-color-surface);
+}
+
+.input-field {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-line-height-base);
+  color: var(--ds-color-text-default);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-sm);
+  padding: var(--ds-spacing-16) 14px;
+  transition: border-color 0.2s ease, border-width 0.2s ease, padding 0.2s ease;
+}
+
+.input-field::placeholder { color: transparent; user-select: none; }
+
+.input-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  color: var(--ds-color-text-label);
+  font-size: var(--ds-font-size-base);
+  font-weight: var(--ds-font-weight-regular);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* Hovered */
+.input-field:hover:not(:disabled) { border-color: var(--ds-color-border-faded); }
+
+/* Filled label */
+.input-field:not(:placeholder-shown) ~ .input-label {
+  top: 0;
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-color-text-default);
+  background-color: var(--input-surface);
+}
+
+/* Focused */
+.input-field:focus {
+  outline: none;
+  border: 2px solid var(--ds-color-primary) !important;
+  caret-color: var(--ds-color-primary);
+  padding: 15px 13px !important;
+}
+.input-field:focus ~ .input-label {
+  top: 0;
+  font-size: var(--ds-font-size-xs);
+  color: var(--ds-color-primary) !important;
+  background-color: var(--input-surface);
+}
+
+/* Disabled */
+.input-field:disabled {
+  border: 1px solid var(--ds-color-border-disabled) !important;
+  color: var(--ds-color-text-disabled) !important;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+.input-field:disabled ~ .input-label {
+  color: var(--ds-color-text-disabled) !important;
+}
+.input-field:disabled:not(:placeholder-shown) ~ .input-label {
+  background-color: var(--input-surface);
+}

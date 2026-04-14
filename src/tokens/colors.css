@@ -1,0 +1,24 @@
+:root {
+  /* Brand */
+  --ds-color-primary: #40E18B;
+  --ds-color-primary-faded: #38B170;
+  --ds-color-primary-ring: rgba(64, 225, 139, 0.35);
+
+  /* Text */
+  --ds-color-text-on-primary: #00391D;
+  --ds-color-text-default: #FFFFFF;
+  --ds-color-text-muted: #888888;
+  --ds-color-text-disabled: #5D5F5F;
+  --ds-color-text-label: #C4C7C7;
+
+  /* Surface */
+  --ds-color-bg: #101414;
+  --ds-color-surface: #242424;
+  --ds-color-surface-elevated: #2D2B30;
+  --ds-color-disabled: #363536;
+
+  /* Border */
+  --ds-color-border: #89938D;
+  --ds-color-border-faded: #C4C7C7;
+  --ds-color-border-disabled: #2C2B2C;
+}

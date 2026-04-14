@@ -1,0 +1,98 @@
+.btn {
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-line-height-tight);
+  font-weight: var(--ds-font-weight-semibold);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  padding: var(--ds-spacing-12) var(--ds-spacing-24);
+  height: 40px;
+  border-radius: var(--ds-radius-full);
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ds-color-primary-ring);
+}
+
+/* --- Primary --- */
+.btn-primary {
+  background-color: var(--ds-color-primary);
+  color: var(--ds-color-text-on-primary);
+  border: 1px solid transparent;
+}
+.btn-primary:hover:not(:disabled) { background-color: var(--ds-color-primary-faded); }
+.btn-primary:active:not(:disabled) { background-color: var(--ds-color-primary-faded); }
+.btn-primary:disabled {
+  background-color: var(--ds-color-disabled);
+  color: var(--ds-color-text-disabled);
+  cursor: not-allowed;
+}
+.btn-primary .ripple { background-color: rgba(0, 57, 29, 0.15); }
+
+/* --- Secondary --- */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--ds-color-primary);
+  border: 1px solid var(--ds-color-border);
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--ds-color-surface-elevated);
+  border-color: var(--ds-color-border-faded);
+}
+.btn-secondary:active:not(:disabled) {
+  background-color: var(--ds-color-surface-elevated);
+  border-color: var(--ds-color-border);
+}
+.btn-secondary:focus-visible {
+  background-color: var(--ds-color-surface-elevated);
+  border-color: var(--ds-color-primary);
+}
+.btn-secondary:disabled {
+  background-color: transparent;
+  color: var(--ds-color-text-disabled);
+  border-color: var(--ds-color-disabled);
+  cursor: not-allowed;
+}
+.btn-secondary .ripple { background-color: rgba(64, 225, 139, 0.15); }
+
+/* --- Tertiary --- */
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--ds-color-primary);
+  border: 1px solid transparent;
+}
+.btn-tertiary:hover:not(:disabled) { background-color: var(--ds-color-surface-elevated); }
+.btn-tertiary:active:not(:disabled) { background-color: var(--ds-color-surface-elevated); }
+.btn-tertiary:focus-visible { background-color: var(--ds-color-surface-elevated); }
+.btn-tertiary:disabled {
+  background-color: transparent;
+  color: var(--ds-color-text-disabled);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+.btn-tertiary .ripple { background-color: rgba(64, 225, 139, 0.15); }
+
+/* --- Ripple animation --- */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 600ms linear;
+  pointer-events: none;
+}
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

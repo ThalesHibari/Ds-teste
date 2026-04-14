@@ -1,6 +1,4 @@
-import { Button } from '../components/Button';
-import { Card } from '../components/Card';
-import { Input } from '../components/Input';
+import { Button, Card, Input } from '../../src';
 import loginBg from '../assets/login-bg.svg';
 import './Login.css';
 
@@ -9,10 +7,21 @@ export function Login() {
     <div className="login-layout" style={{ backgroundImage: `url(${loginBg})` }}>
       <Card style={{ maxWidth: '500px', padding: '3.5rem 3rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <h1 style={{ fontSize: '28px', color: '#ffffff', margin: '0 0 8px 0', fontWeight: 700, fontFamily: 'Poppins, sans-serif' }}>
+          <h1 style={{
+            fontSize: 'var(--ds-font-size-xl)',
+            color: 'var(--ds-color-text-default)',
+            margin: '0 0 8px 0',
+            fontWeight: 'var(--ds-font-weight-bold)',
+            fontFamily: 'var(--ds-font-family)',
+          }}>
             Entrar
           </h1>
-          <p style={{ color: '#888888', fontSize: '14px', margin: 0, fontFamily: 'Poppins, sans-serif' }}>
+          <p style={{
+            color: 'var(--ds-color-text-muted)',
+            fontSize: 'var(--ds-font-size-base)',
+            margin: 0,
+            fontFamily: 'var(--ds-font-family)',
+          }}>
             Portal de Academias e Parceiros
           </p>
         </div>
@@ -28,7 +37,7 @@ export function Login() {
           </div>
 
           <Button variant="primary" type="submit" style={{ width: '100%', marginTop: '0.5rem' }}>
-            Acessar porta
+            Acessar portal
           </Button>
 
           <Button variant="secondary" type="button" style={{ width: '100%' }}>
